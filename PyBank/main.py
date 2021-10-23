@@ -2,7 +2,7 @@
 import os
 import csv
 
-# set path for file
+# set path for csv
 csvpath = os.path.join("Resources", "budget_data.csv")
 
 # set variables
@@ -12,10 +12,10 @@ difference = []
 greatest_inc_date = ""
 greatest_dec_date = ""
 
-# open the csv
+# open and read the csv
 with open(csvpath) as csvfile:
     csvreader = csv.reader(csvfile, delimiter=",")
-    csv_header = next(csvreader)
+    csv_header = next(csvfile)
 
     # count total months
     for row in csvreader:
