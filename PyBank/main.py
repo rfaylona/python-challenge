@@ -43,3 +43,12 @@ print("Net Total: $", sum(profit_loss))
 print("Average Change: $", round(avg_chg, 2))  
 print("Greatest Increase: ", greatest_inc_date, "($", greatest_inc,")")
 print("Greatest Decrease: ", greatest_dec_date, "($", greatest_dec,")")
+
+# print to text
+print("Financial Analysis", file=open("output.txt", "a"))
+print("-------------------------------", file=open("output.txt", "a"))
+print("Total Months: ", len(months), file=open("output.txt", "a"))
+print("Net Total: $", sum(profit_loss), file=open("output.txt", "a"))
+print("Average Change: $", round(avg_chg, 2), file=open("output.txt", "a"))  
+print("Greatest Increase: ", greatest_inc_date, "($", greatest_inc,")", file=open("output.txt", "a"))
+print("Greatest Decrease: ", greatest_dec_date, "($", greatest_dec,")", file=open("output.txt", "a"))
